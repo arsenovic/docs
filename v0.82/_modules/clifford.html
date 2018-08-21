@@ -1139,7 +1139,7 @@
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
             <span class="n">newMV</span> <span class="o">=</span> <span class="n">newMV</span> <span class="o">*</span> <span class="bp">self</span>
 
-            <span class="k">return</span> <span class="n">newMV</span>
+        <span class="k">return</span> <span class="n">newMV</span>
 
     <span class="k">def</span> <span class="nf">__rpow__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Exponentiation of a real by a multivector</span>
@@ -2468,9 +2468,9 @@
 
     <span class="k">def</span> <span class="nf">down</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
         <span class="n">x_down</span> <span class="o">=</span>  <span class="p">(</span><span class="n">homo</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">^</span> <span class="n">E0</span><span class="p">)</span><span class="o">*</span><span class="n">E0</span>
-        <span class="n">new_val</span> <span class="o">=</span> <span class="n">x_down</span><span class="o">.</span><span class="n">value</span><span class="p">[:</span><span class="n">layout</span><span class="o">.</span><span class="n">gaDims</span><span class="p">]</span>
+        <span class="c1">#new_val = x_down.value[:layout.gaDims]</span>
         <span class="c1"># create vector in layout (not cga)</span>
-        <span class="n">x_down</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">MultiVector</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">new_val</span><span class="p">)</span>
+        <span class="c1">#x_down = layout.MultiVector(value=new_val)</span>
         <span class="k">return</span> <span class="n">x_down</span>
         
     <span class="n">stuff</span> <span class="o">=</span> <span class="p">{}</span>
